@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,47 +8,77 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity"
-    >
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textin_name"
+    tools:context=".MainActivity">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:helperText="Required Fields*"
-        app:helperTextTextColor="@color/red"
-        app:startIconDrawable="@drawable/ic_house"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        app:endIconMode="clear_text">
-
-        <EditText
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            android:id="@+id/edt_property"
-            android:hint="Property Type"
-            android:inputType="text"
-            android:imeOptions="actionNext" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".MainActivity">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:helperText="Required fields*"
-        app:helperTextTextColor="@color/red"
-        app:startIconDrawable="@drawable/ic_price"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
-        <EditText
-            android:id="@+id/edt_price"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Rent Price"
-            android:imeOptions="actionNext" />
+            app:helperText="Required fields*"
+            app:helperTextTextColor="@color/red"
+            app:startIconDrawable="@drawable/ic_house"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
-        </com.google.android.material.textfield.TextInputLayout>        />
+            <AutoCompleteTextView
+                android:id="@+id/tv_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rz_property"
+                android:importantForAutofill="no"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:helperText="Required fields*"
+            app:helperTextTextColor="@color/red"
+            app:startIconDrawable="@drawable/ic_price"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <EditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rz_price"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                app:helperText="Required fields*"
+                app:helperTextTextColor="@color/red"
+                app:startIconDrawable="@drawable/ic_date"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <EditText
+                android:id="@+id/edt_datetime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rz_date"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
         <com.google.android.material.textfield.TextInputLayout
 
             android:layout_width="match_parent"
@@ -55,108 +86,88 @@
             android:layout_marginTop="10dp"
             app:helperText="Required fields*"
             app:helperTextTextColor="@color/red"
-            app:startIconDrawable="@drawable/ic_date"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-            >
-            <EditText
-                android:id="@+id/edt_datetime"
+            app:startIconDrawable="@drawable/ic_room"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/tv_bedroom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
-                android:hint="Date and Time"
-                android:imeOptions="actionNext" />
+                android:hint="@string/rz_bedroom"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="none" />
 
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:startIconDrawable="@drawable/ic_furniture"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:id="@+id/tv_furniture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rz_furniture"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="none" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
 
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:helperText="Required fields*"
-        app:helperTextTextColor="@color/red"
-        app:startIconDrawable="@drawable/ic_room"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        >
-        <EditText
-            android:id="@+id/edt_bedroom"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Bed Room"
-            android:imeOptions="actionNext" />
+            android:layout_marginTop="10dp"
+            app:startIconDrawable="@drawable/ic_note"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <EditText
+                android:id="@+id/edt_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rz_note"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        >
-        <EditText
-            android:id="@+id/edt_furniture"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Furniture Type"
-            android:imeOptions="actionNext" />
+            android:layout_marginTop="10dp"
+            app:helperText="Required fields*"
+            app:helperTextTextColor="@color/red"
+            app:startIconDrawable="@drawable/ic_person">
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
+            <EditText
+                android:id="@+id/edt_reporter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/rz_reporter"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-
-        app:startIconDrawable="@drawable/ic_note"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        >
-        <EditText
-            android:id="@+id/edt_note"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:hint="Note"
-            android:imeOptions="actionNext" />
+            app:iconGravity="textStart"
+            android:text="@string/rz_add"
+            android:padding="15dp"
+            android:layout_marginTop="30dp"
+            app:cornerRadius="100dp">
 
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:helperText="Required fields*"
-        app:helperTextTextColor="@color/red"
-        app:startIconDrawable="@drawable/ic_person"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        >
-        <EditText
-            android:id="@+id/edt_reporter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:hint="Reporter"
-            android:imeOptions="actionNext" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/bt_add"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:iconGravity="textStart"
-        android:text="Add Home"
-        android:padding="15dp"
-        android:layout_marginTop="30dp"
-        app:cornerRadius="100dp"
-        >
-
-    </com.google.android.material.button.MaterialButton>
-
-</LinearLayout>
+        </com.google.android.material.button.MaterialButton>
+    </LinearLayout>
+</ScrollView>

@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">RentalZ_coursework</string>
-    <string name="list_item">List Item</string>
+    <string name="rz_price">Rent Price</string>
+    <string name="rz_property">Property Type</string>
+    <string name="rz_note">Notes</string>
+    <string name="rz_reporter">Reporter</string>
+    <string name="rz_furniture">Furniture Type</string>
+    <string name="rz_date">Date and Time</string>
+    <string name="rz_bedroom">Bed Room</string>
+    <string name="rz_add">Add Home</string>
+
+
+
 
 </resources>
