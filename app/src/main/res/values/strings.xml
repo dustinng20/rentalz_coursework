@@ -8,8 +8,11 @@
     <string name="rz_date">Date and Time</string>
     <string name="rz_bedroom">Bed Room</string>
     <string name="rz_add">Add Home</string>
-
-
+    <string name="invalid_property">Please choose Property Type</string>
+    <string name="invalid_price">Please fill the price</string>
+    <string name="invalid_datetime">Please fill the date time</string>
+    <string name="invalid_bedroom">Please choose bedroom</string>
+    <string name="invalid_reporter">Please fill the reporter name</string>
 
 
 </resources>

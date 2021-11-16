@@ -18,10 +18,12 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_property"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:helperText="Required fields*"
+            app:helperText="*"
             app:helperTextTextColor="@color/red"
+
             app:startIconDrawable="@drawable/ic_house"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
@@ -37,10 +39,11 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:helperText="Required fields*"
+            android:layout_marginTop="5dp"
+            app:helperText="*"
             app:helperTextTextColor="@color/red"
             app:startIconDrawable="@drawable/ic_price"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
@@ -57,11 +60,11 @@
 
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
-
+                android:id="@+id/til_datetime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                app:helperText="Required fields*"
+                android:layout_marginTop="5dp"
+                app:helperText="*"
                 app:helperTextTextColor="@color/red"
                 app:startIconDrawable="@drawable/ic_date"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
@@ -80,11 +83,11 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-
+            android:id="@+id/til_bedroom"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:helperText="Required fields*"
+            android:layout_marginTop="5dp"
+            app:helperText="*"
             app:helperTextTextColor="@color/red"
             app:startIconDrawable="@drawable/ic_room"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
@@ -101,10 +104,10 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-
+            android:id="@+id/til_furniture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             app:startIconDrawable="@drawable/ic_furniture"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
 
@@ -121,9 +124,10 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_note"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             app:startIconDrawable="@drawable/ic_note"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
 
@@ -139,11 +143,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_reporter"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:helperText="Required fields*"
+            android:layout_marginTop="5dp"
+            app:helperText="*"
             app:helperTextTextColor="@color/red"
             app:startIconDrawable="@drawable/ic_person">
 
@@ -154,11 +159,11 @@
                 android:hint="@string/rz_reporter"
                 android:imeOptions="actionNext"
                 android:importantForAutofill="no"
-                android:inputType="number"
+                android:inputType="text"
                 tools:ignore="SpeakableTextPresentCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/bt_add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -166,8 +171,8 @@
             android:text="@string/rz_add"
             android:padding="15dp"
             android:layout_marginTop="30dp"
-            app:cornerRadius="100dp">
+            app:cornerRadius="100dp"/>
 
-        </com.google.android.material.button.MaterialButton>
+
     </LinearLayout>
 </ScrollView>
